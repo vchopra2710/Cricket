@@ -7,7 +7,9 @@ import androidx.core.view.WindowCompat
 import com.app.compose.cricket.ui.compose.SystemUiController
 import com.app.compose.cricket.ui.home.HomeScreen
 import com.app.compose.cricket.ui.theme.CricketTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
