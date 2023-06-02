@@ -9,6 +9,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
+import com.app.compose.cricket.ui.compose.IconRes
 
 private val navigationItem: List<NavigationItem> = NavigationItem.values().toList()
 
@@ -22,7 +23,7 @@ fun NavigationBar(navController: NavHostController) = BottomNavigation(
 
     navigationItem.forEach { item ->
         BottomNavigationItem(
-            icon = { },
+            icon = { IconRes(icon = item.icon) },
             label = { Text(text = stringResource(id = item.title)) },
             selected = currentRoute == item.route,
             selectedContentColor = Color.White,

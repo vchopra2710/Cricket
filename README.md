@@ -1,6 +1,7 @@
 # Cricket
 
 API: https://cricketdata.org
+register and get api key
 
 Dependencies:
 1. Accompanist
