@@ -1,0 +1,654 @@
+{
+  "apikey": "56b36513-28cd-4aef-aada-dc100166f095",
+  "data": [
+    {
+      "id": "d12bdde6-4017-41b0-87aa-fb6b7ef00cd5",
+      "name": "Sri Lanka vs Afghanistan, 1st ODI",
+      "matchType": "odi",
+      "status": "Innings Break",
+      "venue": "Mahinda Rajapaksa International Stadium, Hambantota",
+      "date": "2023-06-02",
+      "dateTimeGMT": "2023-06-02T09:00:00",
+      "teams": [
+        "Sri Lanka",
+        "Afghanistan"
+      ],
+      "teamInfo": [
+        {
+          "name": "Afghanistan",
+          "shortname": "AFG",
+          "img": "https://g.cricapi.com/iapi/1-637877075587179422.webp?w=48"
+        },
+        {
+          "name": "Sri Lanka",
+          "shortname": "SL",
+          "img": "https://g.cricapi.com/iapi/4191-638101639309122979.webp?w=48"
+        }
+      ],
+      "score": [
+        {
+          "r": 268,
+          "w": 10,
+          "o": 50,
+          "inning": "Sri Lanka Inning 1"
+        }
+      ],
+      "series_id": "72131b7a-dc43-4bb4-a162-492ca470f8da",
+      "fantasyEnabled": true,
+      "bbbEnabled": true,
+      "hasSquad": true,
+      "matchStarted": false,
+      "matchEnded": false
+    },
+    {
+      "id": "a3f8c50c-7ba9-42e9-9b35-09bae51d7911",
+      "name": "Sussex vs Essex, South Group",
+      "matchType": "t20",
+      "status": "Essex won by 25 runs",
+      "venue": "County Ground, Hove",
+      "date": "2023-06-01",
+      "dateTimeGMT": "2023-06-01T18:00:00",
+      "teams": [
+        "Sussex",
+        "Essex"
+      ],
+      "teamInfo": [
+        {
+          "name": "Essex",
+          "shortname": "ESX",
+          "img": "https://g.cricapi.com/iapi/1119-637885549753088458.webp?w=48"
+        },
+        {
+          "name": "Sussex",
+          "shortname": "SUSS",
+          "img": "https://g.cricapi.com/iapi/1134-637889091814592518.webp?w=48"
+        }
+      ],
+      "score": [
+        {
+          "r": 163,
+          "w": 7,
+          "o": 20,
+          "inning": "Essex Inning 1"
+        },
+        {
+          "r": 138,
+          "w": 10,
+          "o": 18.4,
+          "inning": "Sussex Inning 1"
+        }
+      ],
+      "series_id": "37fa8107-2df7-4779-81f6-d19969429dfe",
+      "fantasyEnabled": true,
+      "bbbEnabled": true,
+      "hasSquad": true,
+      "matchStarted": true,
+      "matchEnded": true
+    },
+    {
+      "id": "fc45bdef-d655-4dec-800d-22b65723d521",
+      "name": "Yorkshire vs Lancashire, North Group",
+      "matchType": "t20",
+      "status": "Yorkshire won by 15 runs",
+      "venue": "Headingley, Leeds",
+      "date": "2023-06-01",
+      "dateTimeGMT": "2023-06-01T18:00:00",
+      "teams": [
+        "Yorkshire",
+        "Lancashire"
+      ],
+      "teamInfo": [
+        {
+          "name": "Lancashire",
+          "shortname": "LNCS",
+          "img": "https://g.cricapi.com/iapi/1125-637885551497331567.webp?w=48"
+        },
+        {
+          "name": "Yorkshire",
+          "shortname": "YRK",
+          "img": "https://g.cricapi.com/iapi/1139-637885552795894277.webp?w=48"
+        }
+      ],
+      "score": [
+        {
+          "r": 195,
+          "w": 6,
+          "o": 20,
+          "inning": "Yorkshire Inning 1"
+        },
+        {
+          "r": 180,
+          "w": 8,
+          "o": 20,
+          "inning": "Lancashire Inning 1"
+        }
+      ],
+      "series_id": "37fa8107-2df7-4779-81f6-d19969429dfe",
+      "fantasyEnabled": false,
+      "bbbEnabled": true,
+      "hasSquad": false,
+      "matchStarted": true,
+      "matchEnded": true
+    },
+    {
+      "id": "ce61b078-9929-4acf-a367-106f52eb603d",
+      "name": "Leicestershire vs Derbyshire, North Group",
+      "matchType": "t20",
+      "status": "Derbyshire won by 2 runs",
+      "venue": "Grace Road, Leicester",
+      "date": "2023-06-01",
+      "dateTimeGMT": "2023-06-01T17:30:00",
+      "teams": [
+        "Leicestershire",
+        "Derbyshire"
+      ],
+      "teamInfo": [
+        {
+          "name": "Derbyshire",
+          "shortname": "DERB",
+          "img": "https://g.cricapi.com/iapi/1117-637889091569915358.webp?w=48"
+        },
+        {
+          "name": "Leicestershire",
+          "shortname": "LECS",
+          "img": "https://g.cricapi.com/iapi/1126-637889090878436462.webp?w=48"
+        }
+      ],
+      "score": [
+        {
+          "r": 189,
+          "w": 5,
+          "o": 20,
+          "inning": "Derbyshire Inning 1"
+        },
+        {
+          "r": 187,
+          "w": 5,
+          "o": 20,
+          "inning": "Leicestershire Inning 1"
+        }
+      ],
+      "series_id": "37fa8107-2df7-4779-81f6-d19969429dfe",
+      "fantasyEnabled": true,
+      "bbbEnabled": true,
+      "hasSquad": true,
+      "matchStarted": true,
+      "matchEnded": true
+    },
+    {
+      "id": "aadaa729-d14a-4567-8b6e-0f60d9ef8405",
+      "name": "Eswatini vs Mauritius, 10th Match",
+      "matchType": "t20",
+      "status": "Eswatini won by 5 wkts",
+      "venue": "Willowmoore Park, Benoni",
+      "date": "2023-06-01",
+      "dateTimeGMT": "2023-06-01T10:30:00",
+      "teams": [
+        "Eswatini",
+        "Mauritius"
+      ],
+      "teamInfo": [
+        {
+          "name": "Eswatini",
+          "shortname": "EWZ",
+          "img": "https://g.cricapi.com/iapi/602-637876983785379790.webp?w=48"
+        },
+        {
+          "name": "Mauritius",
+          "shortname": "MAU",
+          "img": "https://h.cricapi.com/img/icon512.png"
+        }
+      ],
+      "score": [
+        {
+          "r": 142,
+          "w": 7,
+          "o": 20,
+          "inning": "Mauritius Inning 1"
+        },
+        {
+          "r": 143,
+          "w": 5,
+          "o": 14.2,
+          "inning": "Eswatini Inning 1"
+        }
+      ],
+      "series_id": "4c9ccb5c-adba-4025-9ced-5aae3d0da987",
+      "fantasyEnabled": true,
+      "bbbEnabled": false,
+      "hasSquad": true,
+      "matchStarted": true,
+      "matchEnded": true
+    },
+    {
+      "id": "da0aa508-8ce9-42d8-9190-26db519a9434",
+      "name": "Botswana vs Mozambique, 9th Match",
+      "matchType": "t20",
+      "status": "Botswana won by 7 wkts",
+      "venue": "Willowmoore Park, Benoni",
+      "date": "2023-06-01",
+      "dateTimeGMT": "2023-06-01T06:00:00",
+      "teams": [
+        "Botswana",
+        "Mozambique"
+      ],
+      "teamInfo": [
+        {
+          "name": "Botswana",
+          "shortname": "BOT",
+          "img": "https://g.cricapi.com/iapi/589-637867438995934034.webp?w=48"
+        },
+        {
+          "name": "Mozambique",
+          "shortname": "MOZ",
+          "img": "https://g.cricapi.com/iapi/629-637874527190928305.webp?w=48"
+        }
+      ],
+      "score": [
+        {
+          "r": 89,
+          "w": 7,
+          "o": 20,
+          "inning": "Mozambique Inning 1"
+        },
+        {
+          "r": 92,
+          "w": 3,
+          "o": 13.1,
+          "inning": "Botswana Inning 1"
+        }
+      ],
+      "series_id": "4c9ccb5c-adba-4025-9ced-5aae3d0da987",
+      "fantasyEnabled": true,
+      "bbbEnabled": false,
+      "hasSquad": true,
+      "matchStarted": true,
+      "matchEnded": true
+    },
+    {
+      "id": "fee2b6cc-f1b2-4412-8524-07b53336f8bb",
+      "name": "France Women vs Jersey Women, 12th Match",
+      "matchType": "t20",
+      "status": "France Women won by 6 runs",
+      "venue": "Farmers Cricket Club Ground, St Martin",
+      "date": "2023-06-01",
+      "dateTimeGMT": "2023-06-01T14:00:00",
+      "teams": [
+        "France Women",
+        "Jersey Women"
+      ],
+      "teamInfo": [
+        {
+          "name": "France Women",
+          "shortname": "FRAW",
+          "img": "https://g.cricapi.com/iapi/605-637872735496563451.webp?w=48"
+        },
+        {
+          "name": "Jersey Women",
+          "shortname": "JERW",
+          "img": "https://g.cricapi.com/iapi/1178-637877088776576806.webp?w=48"
+        }
+      ],
+      "score": [
+        {
+          "r": 110,
+          "w": 8,
+          "o": 20,
+          "inning": "France Women Inning 1"
+        },
+        {
+          "r": 104,
+          "w": 10,
+          "o": 19.3,
+          "inning": "Jersey Women Inning 1"
+        }
+      ],
+      "series_id": "46c445b8-c0c2-4300-8f2c-f630e5c13c7d",
+      "fantasyEnabled": true,
+      "bbbEnabled": false,
+      "hasSquad": true,
+      "matchStarted": true,
+      "matchEnded": true
+    },
+    {
+      "id": "912db562-2164-4060-9ae4-486a4239f743",
+      "name": "Germany Women vs Sweden Women, 11th Match",
+      "matchType": "t20",
+      "status": "Germany Women won by 7 wkts",
+      "venue": "Grainville, St Saviour",
+      "date": "2023-06-01",
+      "dateTimeGMT": "2023-06-01T14:00:00",
+      "teams": [
+        "Germany Women",
+        "Sweden Women"
+      ],
+      "teamInfo": [
+        {
+          "name": "Germany Women",
+          "shortname": "GEMW",
+          "img": "https://g.cricapi.com/iapi/1682-637926300796611117.webp?w=48"
+        },
+        {
+          "name": "Sweden Women",
+          "shortname": "SWE-W",
+          "img": "https://g.cricapi.com/iapi/3004-638040161487648380.webp?w=48"
+        }
+      ],
+      "score": [
+        {
+          "r": 139,
+          "w": 6,
+          "o": 20,
+          "inning": "Sweden Women Inning 1"
+        },
+        {
+          "r": 140,
+          "w": 3,
+          "o": 18.2,
+          "inning": "Germany Women Inning 1"
+        }
+      ],
+      "series_id": "46c445b8-c0c2-4300-8f2c-f630e5c13c7d",
+      "fantasyEnabled": true,
+      "bbbEnabled": false,
+      "hasSquad": true,
+      "matchStarted": true,
+      "matchEnded": true
+    },
+    {
+      "id": "e733076f-8f94-4470-8295-6777e5b88c51",
+      "name": "France Women vs Turkey Women, 10th Match",
+      "matchType": "t20",
+      "status": "France Women won by 128 runs",
+      "venue": "Farmers Cricket Club Ground, St Martin",
+      "date": "2023-06-01",
+      "dateTimeGMT": "2023-06-01T10:00:00",
+      "teams": [
+        "France Women",
+        "Turkey Women"
+      ],
+      "teamInfo": [
+        {
+          "name": "France Women",
+          "shortname": "FRAW",
+          "img": "https://g.cricapi.com/iapi/605-637872735496563451.webp?w=48"
+        },
+        {
+          "name": "Turkey Women",
+          "shortname": "TKW",
+          "img": "https://h.cricapi.com/img/icon512.png"
+        }
+      ],
+      "score": [
+        {
+          "r": 169,
+          "w": 4,
+          "o": 20,
+          "inning": "France Women Inning 1"
+        },
+        {
+          "r": 41,
+          "w": 10,
+          "o": 11.4,
+          "inning": "Turkey Women Inning 1"
+        }
+      ],
+      "series_id": "46c445b8-c0c2-4300-8f2c-f630e5c13c7d",
+      "fantasyEnabled": true,
+      "bbbEnabled": false,
+      "hasSquad": true,
+      "matchStarted": true,
+      "matchEnded": true
+    },
+    {
+      "id": "2630686a-47b6-4514-a9d7-450b6d2c64bd",
+      "name": "Germany Women vs Italy Women, 9th Match",
+      "matchType": "t20",
+      "status": "Italy Women won by 7 wkts",
+      "venue": "Grainville, St Saviour",
+      "date": "2023-06-01",
+      "dateTimeGMT": "2023-06-01T10:00:00",
+      "teams": [
+        "Germany Women",
+        "Italy Women"
+      ],
+      "teamInfo": [
+        {
+          "name": "Germany Women",
+          "shortname": "GEMW",
+          "img": "https://g.cricapi.com/iapi/1682-637926300796611117.webp?w=48"
+        },
+        {
+          "name": "Italy Women",
+          "shortname": "IT-W",
+          "img": "https://g.cricapi.com/iapi/3002-638040162790985209.webp?w=48"
+        }
+      ],
+      "score": [
+        {
+          "r": 142,
+          "w": 3,
+          "o": 20,
+          "inning": "Germany Women Inning 1"
+        },
+        {
+          "r": 143,
+          "w": 3,
+          "o": 19.4,
+          "inning": "Italy Women Inning 1"
+        }
+      ],
+      "series_id": "46c445b8-c0c2-4300-8f2c-f630e5c13c7d",
+      "fantasyEnabled": true,
+      "bbbEnabled": false,
+      "hasSquad": true,
+      "matchStarted": true,
+      "matchEnded": true
+    },
+    {
+      "id": "c0060f77-e81f-4233-8bd1-83ce03c16689",
+      "name": "Bangladesh A vs West Indies A, 3rd unofficial Test",
+      "matchType": "test",
+      "status": "Day 4: 2nd Session - Bangladesh A need 288 runs",
+      "venue": "Sylhet International Cricket Stadium, Sylhet",
+      "date": "2023-05-30",
+      "dateTimeGMT": "2023-05-30T03:00:00",
+      "teams": [
+        "Bangladesh A",
+        "West Indies A"
+      ],
+      "teamInfo": [
+        {
+          "name": "Bangladesh A",
+          "shortname": "BAN-A",
+          "img": "https://g.cricapi.com/iapi/3320-638059286585062365?w=48"
+        },
+        {
+          "name": "West Indies A",
+          "shortname": "WIA",
+          "img": "https://h.cricapi.com/img/icon512.png"
+        }
+      ],
+      "score": [
+        {
+          "r": 445,
+          "w": 10,
+          "o": 116.2,
+          "inning": "West Indies A Inning 1"
+        },
+        {
+          "r": 205,
+          "w": 10,
+          "o": 54,
+          "inning": "Bangladesh A Inning 1"
+        },
+        {
+          "r": 220,
+          "w": 5,
+          "o": 55.2,
+          "inning": "West Indies A Inning 2"
+        },
+        {
+          "r": 173,
+          "w": 3,
+          "o": 53,
+          "inning": "Bangladesh A Inning 2"
+        }
+      ],
+      "series_id": "c6d0c028-aecd-4f85-ab8c-f334e0cdfc68",
+      "fantasyEnabled": true,
+      "bbbEnabled": false,
+      "hasSquad": true,
+      "matchStarted": true,
+      "matchEnded": false
+    },
+    {
+      "id": "213abc7e-e0be-4ae8-b6d0-d752f5cb39fa",
+      "name": "Malaysia Women vs Nepal Women, 3rd T20I",
+      "matchType": "t20",
+      "status": "Nepal Women won by 27 runs",
+      "venue": "UKM-YSD Cricket Oval, Bangi, Malaysia",
+      "date": "2023-06-01",
+      "dateTimeGMT": "2023-06-01T03:00:00",
+      "teams": [
+        "Malaysia Women",
+        "Nepal Women"
+      ],
+      "teamInfo": [
+        {
+          "name": "Malaysia Women",
+          "shortname": "ML-W",
+          "img": "https://g.cricapi.com/iapi/1551-637926306213013515.webp?w=48"
+        },
+        {
+          "name": "Nepal Women",
+          "shortname": "NEPW",
+          "img": "https://g.cricapi.com/iapi/54-637877084789981539.webp?w=48"
+        }
+      ],
+      "score": [
+        {
+          "r": 110,
+          "w": 5,
+          "o": 20,
+          "inning": "Malaysia Women Inning 1"
+        },
+        {
+          "r": 83,
+          "w": 4,
+          "o": 20,
+          "inning": "Nepal Women Inning 1"
+        }
+      ],
+      "series_id": "1a586677-e33f-45f1-ac6f-f3ac4e789c74",
+      "fantasyEnabled": true,
+      "bbbEnabled": true,
+      "hasSquad": true,
+      "matchStarted": true,
+      "matchEnded": true
+    },
+    {
+      "id": "5b270d56-89ea-4e48-a41b-ce85f9727650",
+      "name": "Ireland vs Bangladesh, 1st ODI",
+      "matchType": "odi",
+      "status": "No result (due to rain)",
+      "venue": "County Ground, Chelmsford",
+      "date": "2023-05-09",
+      "dateTimeGMT": "2023-05-09T09:45:00",
+      "teams": [
+        "Ireland",
+        "Bangladesh"
+      ],
+      "teamInfo": [
+        {
+          "name": "Bangladesh",
+          "shortname": "BAN",
+          "img": "https://g.cricapi.com/iapi/9-637877074109248302.webp?w=48"
+        },
+        {
+          "name": "Ireland",
+          "shortname": "IRE",
+          "img": "https://g.cricapi.com/iapi/33-637926315578500224.png?w=48"
+        }
+      ],
+      "score": [
+        {
+          "r": 246,
+          "w": 9,
+          "o": 50,
+          "inning": "Bangladesh Inning 1"
+        },
+        {
+          "r": 65,
+          "w": 3,
+          "o": 16.3,
+          "inning": "Ireland Inning 1"
+        }
+      ],
+      "series_id": "5bf9e811-8a06-446e-8b23-eb17dfb5c071",
+      "fantasyEnabled": true,
+      "bbbEnabled": true,
+      "hasSquad": true,
+      "matchStarted": true,
+      "matchEnded": false
+    },
+    {
+      "id": "4fa05994-ad78-4887-ba43-069974ca162a",
+      "name": "England vs Ireland, Only Test",
+      "matchType": "test",
+      "status": "Day 1: Stumps - England trail by 20 runs",
+      "venue": "Lord's, London",
+      "date": "2023-06-01",
+      "dateTimeGMT": "2023-06-01T10:00:00",
+      "teams": [
+        "England",
+        "Ireland"
+      ],
+      "teamInfo": [
+        {
+          "name": "England",
+          "shortname": "ENG",
+          "img": "https://g.cricapi.com/iapi/23-637877072894080569.webp?w=48"
+        },
+        {
+          "name": "Ireland",
+          "shortname": "IRE",
+          "img": "https://g.cricapi.com/iapi/33-637926315578500224.png?w=48"
+        }
+      ],
+      "score": [
+        {
+          "r": 172,
+          "w": 10,
+          "o": 56.2,
+          "inning": "Ireland Inning 1"
+        },
+        {
+          "r": 152,
+          "w": 1,
+          "o": 25,
+          "inning": "England Inning 1"
+        }
+      ],
+      "series_id": "e484511b-4751-40c2-9b18-4abcbb76d314",
+      "fantasyEnabled": true,
+      "bbbEnabled": false,
+      "hasSquad": true,
+      "matchStarted": true,
+      "matchEnded": false
+    }
+  ],
+  "status": "success",
+  "info": {
+    "hitsToday": 14,
+    "hitsUsed": 1,
+    "hitsLimit": 100,
+    "credits": 0,
+    "server": 18,
+    "offsetRows": 0,
+    "totalRows": 14,
+    "queryTime": 20.9107,
+    "s": 0,
+    "cache": 0
+  }
+}
