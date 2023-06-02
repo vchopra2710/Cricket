@@ -35,7 +35,7 @@ fun CricketTheme(
     dynamicColor: Boolean = true,
     content: @Composable () -> Unit
 ) {
-    val colors = if (darkTheme) DarkColorScheme else LightColorScheme
+    val colors = LightColorScheme
 
     MaterialTheme(
         colors = colors,
