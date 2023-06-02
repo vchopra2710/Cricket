@@ -14,4 +14,4 @@ Dependencies:
 
 ### Screenshots
 
-![Alt text](/Cricket/app/src/main/res/raw/current_matches.png?raw=true "Optional Title")
+![Alt text](Cricket/screenshot/current_matches.png?raw=true "Optional Title")
