@@ -13,5 +13,10 @@ Dependencies:
 3. HTTP client: https://ktor.io/docs/welcome.html
 
 ### Screenshots
-
+1. Current match list:
+   - uses horizontal scroll pager to navigate between current matches
 ![Alt text](screenshot/current_matches.png?raw=true "Optional Title")
+
+2. Series list
+   - uses lazy column to load and display series list
+![Alt text](screenshot/series_list.png?raw=true "Optional Title")
