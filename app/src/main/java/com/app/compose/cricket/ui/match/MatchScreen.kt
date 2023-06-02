@@ -3,16 +3,12 @@ package com.app.compose.cricket.ui.match
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -20,15 +16,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
-import coil.compose.AsyncImage
 import com.app.compose.cricket.domain.model.currentmatches.Data
 import com.app.compose.cricket.domain.model.currentmatches.Score
 import com.app.compose.cricket.domain.model.currentmatches.TeamInfo
+import com.app.compose.cricket.ui.compose.ScoreRowView
+import com.app.compose.cricket.ui.compose.Text
 import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.pager.HorizontalPager
 import com.google.accompanist.pager.HorizontalPagerIndicator
@@ -45,9 +39,15 @@ fun MatchScreen(
     horizontalAlignment = Alignment.CenterHorizontally,
     verticalArrangement = Arrangement.Top,
 ) {
-    val currentMatch by viewModel.currentMatch.collectAsState()
+    val state by viewModel.state.collectAsState()
     Spacer(modifier = Modifier.height(40.dp))
-    CurrentMatchesHorizontalPager(currentMatch = currentMatch?.data ?: listOf())
+    CurrentMatchesHorizontalPager(
+        currentMatch = state.currentMatches?.data ?: listOf()
+    )
+    Spacer(modifier = Modifier.height(40.dp))
+    CricketScoreLayout(
+        cricketData = state.cricketScore?.cricketData ?: listOf()
+    )
 }
 
 @OptIn(ExperimentalPagerApi::class)
@@ -87,7 +87,7 @@ private fun CurrentMatchItem(
         .background(Color.Gray.copy(alpha = 0.5f))
         .then(Modifier.padding(16.dp))
 ) {
-    CurrentMatchText(text = data.name)
+    Text(text = data.name)
 
     Spacer(modifier = Modifier.height(8.dp))
 
@@ -98,7 +98,7 @@ private fun CurrentMatchItem(
 
     Spacer(modifier = Modifier.height(8.dp))
 
-    CurrentMatchText(data.status)
+    Text(data.status)
 }
 
 
@@ -132,49 +132,13 @@ private fun TeamView(
 private fun TeamNameAndIconItem(
     team: TeamInfo,
     scoreList: List<Score>,
-) = Row(
-    verticalAlignment = Alignment.CenterVertically,
 ) {
-    AsyncImage(
-        model = team.img,
-        contentDescription = null,
-        modifier = Modifier
-            .size(32.dp)
-            .clip(RoundedCornerShape(10.dp))
-    )
-
-    Spacer(modifier = Modifier.width(8.dp))
-
-    CurrentMatchText(
-        text = team.shortname,
-        fontSize = 16.sp,
-        fontWeight = FontWeight.Bold,
-    )
-
-    Spacer(modifier = Modifier.weight(1f))
-
     val score = scoreList.joinToString(separator = " & ") { score ->
         "${score.run}-${score.wicket} (${score.over})"
     }
-
-    CurrentMatchText(
-        text = score,
-        fontSize = 14.sp,
-        fontWeight = FontWeight.Bold,
+    ScoreRowView(
+        image = team.img,
+        name = team.shortname,
+        score = score,
     )
 }
-
-@Composable
-private fun CurrentMatchText(
-    text: String,
-    fontSize: TextUnit = 12.sp,
-    maxLines: Int = 1,
-    color: Color = Color.White,
-    fontWeight: FontWeight = FontWeight.Normal,
-) = Text(
-    text = text,
-    maxLines = maxLines,
-    fontSize = fontSize,
-    color = color,
-    fontWeight = fontWeight,
-)

@@ -13,7 +13,6 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Divider
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -23,12 +22,12 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.app.compose.cricket.R
 import com.app.compose.cricket.domain.model.series.SeriesData
+import com.app.compose.cricket.ui.compose.Text
 
 @Composable
 fun SeriesScreen(
@@ -69,18 +68,18 @@ private fun SeriesItem(
         .background(Color.Gray.copy(alpha = 0.5f))
         .then(Modifier.padding(16.dp))
 ) {
-    SeriesText(
+    Text(
         text = seriesData.name,
         fontSize = 16.sp,
         fontWeight = FontWeight.Bold,
     )
     Spacer(modifier = Modifier.height(8.dp))
-    SeriesText(
+    Text(
         text = "${seriesData.startDate} - ${seriesData.endDate}",
         fontWeight = FontWeight.SemiBold,
     )
     Spacer(modifier = Modifier.height(8.dp))
-    SeriesText(text = stringResource(id = R.string.series_matches, seriesData.matches))
+    Text(text = stringResource(id = R.string.series_matches, seriesData.matches))
     Spacer(modifier = Modifier.height(8.dp))
     MatchesData(
         matches = listOf(
@@ -102,11 +101,11 @@ private fun MatchesData(matches: List<Pair<String, Int>>) = Row(
         Column(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            SeriesText(
+            Text(
                 text = it.first,
                 fontWeight = FontWeight.SemiBold,
             )
-            SeriesText(
+            Text(
                 text = it.second.toString(),
                 fontWeight = FontWeight.Bold,
             )
@@ -122,18 +121,3 @@ private fun MatchesData(matches: List<Pair<String, Int>>) = Row(
     }
 
 }
-
-@Composable
-private fun SeriesText(
-    text: String,
-    fontSize: TextUnit = 14.sp,
-    maxLines: Int = 1,
-    color: Color = Color.White,
-    fontWeight: FontWeight = FontWeight.Normal,
-) = Text(
-    text = text,
-    maxLines = maxLines,
-    fontSize = fontSize,
-    color = color,
-    fontWeight = fontWeight,
-)

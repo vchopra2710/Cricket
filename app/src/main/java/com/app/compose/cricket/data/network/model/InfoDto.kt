@@ -10,9 +10,9 @@ data class InfoDto(
     @SerialName("hitsLimit") val hitsLimit: Int,
     @SerialName("credits") val credits: Int,
     @SerialName("server") val server: Int,
-    @SerialName("offsetRows") val offsetRows: Int,
-    @SerialName("totalRows") val totalRows: Int,
+    @SerialName("offsetRows") val offsetRows: Int? = null,
+    @SerialName("totalRows") val totalRows: Int? = null,
     @SerialName("queryTime") val queryTime: Double,
     @SerialName("s") val s: Int,
-    @SerialName("cache") val cache: Int
+    @SerialName("cache") val cache: Int? = null,
 )

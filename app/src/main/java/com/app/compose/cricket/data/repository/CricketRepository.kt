@@ -5,8 +5,10 @@ import com.app.compose.cricket.BuildConfig
 import com.app.compose.cricket.R
 import com.app.compose.cricket.data.network.ApiUrls
 import com.app.compose.cricket.data.network.mapper.toDomain
+import com.app.compose.cricket.data.network.model.cricscore.CricketScoreDto
 import com.app.compose.cricket.data.network.model.currentmatches.CurrentMatchDto
 import com.app.compose.cricket.data.network.model.series.SeriesDto
+import com.app.compose.cricket.domain.model.cricscore.CricketScore
 import com.app.compose.cricket.domain.model.currentmatches.CurrentMatch
 import com.app.compose.cricket.domain.model.series.Series
 import com.app.compose.cricket.domain.repository.ICricketRepository
@@ -26,6 +28,10 @@ class CricketRepository @Inject constructor(
     private val client: HttpClient
 ) : ICricketRepository {
 
+    private val json = Json {
+        explicitNulls = false
+    }
+
     override suspend fun getCurrentMatches(): CurrentMatch {
         val currentMatchDto: CurrentMatchDto =
             if (CONNECT_WITH_API) {
@@ -40,7 +46,7 @@ class CricketRepository @Inject constructor(
                 response.body()
             } else {
                 val currentMatchesString = context.readJsonFile(id = R.raw.current_match_dto)
-                Json.decodeFromString(currentMatchesString)
+                json.decodeFromString(currentMatchesString)
             }
 
         return currentMatchDto.toDomain()
@@ -60,9 +66,29 @@ class CricketRepository @Inject constructor(
                 response.body()
             } else {
                 val currentMatchesString = context.readJsonFile(id = R.raw.series_list)
-                Json.decodeFromString(currentMatchesString)
+                json.decodeFromString(currentMatchesString)
             }
 
         return seriesDto.toDomain()
+    }
+
+    override suspend fun getCricketScore(): CricketScore {
+        val cricketScoreDto: CricketScoreDto =
+            if (CONNECT_WITH_API) {
+                val response: HttpResponse = client.request(ApiUrls.CRICKET_SCORE.url) {
+                    method = HttpMethod.Get
+                    url {
+                        parameters.append("apikey", BuildConfig.API_KEY)
+                        parameters.append("offset", "0")
+                    }
+                }
+
+                response.body()
+            } else {
+                val currentMatchesString = context.readJsonFile(id = R.raw.cric_score)
+                json.decodeFromString(currentMatchesString)
+            }
+
+        return cricketScoreDto.toDomain()
     }
 }
