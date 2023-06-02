@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.core.view.WindowCompat
 import com.app.compose.cricket.ui.compose.SystemUiController
+import com.app.compose.cricket.ui.home.HomeScreen
 import com.app.compose.cricket.ui.theme.CricketTheme
 
 class MainActivity : ComponentActivity() {
@@ -13,7 +14,7 @@ class MainActivity : ComponentActivity() {
         WindowCompat.setDecorFitsSystemWindows(window, false)
         setContent {
             SystemUiController()
-            CricketTheme { }
+            CricketTheme { HomeScreen() }
         }
     }
 }
