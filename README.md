@@ -11,3 +11,7 @@ Dependencies:
    - Horizontal Pager: https://google.github.io/accompanist/pager/
 2. Dependency Injection: https://developer.android.com/training/dependency-injection/hilt-android
 3. HTTP client: https://ktor.io/docs/welcome.html
+
+### Screenshots
+
+![Alt text](/Cricket/app/src/main/res/raw/current_matches.png?raw=true "Optional Title")
