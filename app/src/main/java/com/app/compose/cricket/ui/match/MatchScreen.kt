@@ -46,7 +46,6 @@ fun MatchScreen(
     verticalArrangement = Arrangement.Top,
 ) {
     val currentMatch by viewModel.currentMatch.collectAsState()
-
     Spacer(modifier = Modifier.height(40.dp))
     CurrentMatchesHorizontalPager(currentMatch = currentMatch?.data ?: listOf())
 }

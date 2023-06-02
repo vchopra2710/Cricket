@@ -21,11 +21,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.app.compose.cricket.R
 import com.app.compose.cricket.domain.model.series.SeriesData
 
 @Composable
@@ -40,7 +42,6 @@ fun SeriesScreen(
 ) {
     val series by viewModel.series.collectAsState()
     Spacer(modifier = Modifier.height(40.dp))
-
     SeriesList(seriesDataList = series?.seriesData ?: listOf())
 }
 
@@ -79,13 +80,13 @@ private fun SeriesItem(
         fontWeight = FontWeight.SemiBold,
     )
     Spacer(modifier = Modifier.height(8.dp))
-    SeriesText(text = "Matches: ${seriesData.matches}")
+    SeriesText(text = stringResource(id = R.string.series_matches, seriesData.matches))
     Spacer(modifier = Modifier.height(8.dp))
     MatchesData(
         matches = listOf(
-            Pair(first = "Test", second = seriesData.test),
-            Pair(first = "ODI", second = seriesData.odi),
-            Pair(first = "T20", second = seriesData.t20),
+            Pair(first = stringResource(id = R.string.series_test), second = seriesData.test),
+            Pair(first = stringResource(id = R.string.series_odi), second = seriesData.odi),
+            Pair(first = stringResource(id = R.string.series_t20), second = seriesData.t20),
         )
     )
 }

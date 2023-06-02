@@ -3,4 +3,8 @@
     <string name="match_tab">Match</string>
     <string name="score_tab">Score</string>
     <string name="series_tab">Series</string>
+    <string name="series_matches">Matches %s</string>
+    <string name="series_odi">ODI</string>
+    <string name="series_test">Test</string>
+    <string name="series_t20">T20</string>
 </resources>
