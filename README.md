@@ -19,4 +19,6 @@ Dependencies:
 </p>
 
 - Series list: uses lazy column to load and display series list
-![Alt text](screenshot/series_list.png?raw=true)
+<p align="center">
+<img width="350" src="screenshot/series_list.png?raw=true">
+</p>
