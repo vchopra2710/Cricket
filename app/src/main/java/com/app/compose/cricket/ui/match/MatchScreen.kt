@@ -45,10 +45,10 @@ fun MatchScreen(
     horizontalAlignment = Alignment.CenterHorizontally,
     verticalArrangement = Arrangement.Top,
 ) {
-    val state by viewModel.state.collectAsState()
+    val currentMatch by viewModel.currentMatch.collectAsState()
 
     Spacer(modifier = Modifier.height(40.dp))
-    CurrentMatchesHorizontalPager(currentMatch = state.currentMatch?.data ?: listOf())
+    CurrentMatchesHorizontalPager(currentMatch = currentMatch?.data ?: listOf())
 }
 
 @OptIn(ExperimentalPagerApi::class)

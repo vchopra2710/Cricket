@@ -2,12 +2,10 @@ package com.app.compose.cricket.data.network.mapper
 
 import com.app.compose.cricket.data.network.model.currentmatches.CurrentMatchDto
 import com.app.compose.cricket.data.network.model.currentmatches.DataDto
-import com.app.compose.cricket.data.network.model.currentmatches.InfoDto
 import com.app.compose.cricket.data.network.model.currentmatches.ScoreDto
 import com.app.compose.cricket.data.network.model.currentmatches.TeamInfoDto
 import com.app.compose.cricket.domain.model.currentmatches.CurrentMatch
 import com.app.compose.cricket.domain.model.currentmatches.Data
-import com.app.compose.cricket.domain.model.currentmatches.Info
 import com.app.compose.cricket.domain.model.currentmatches.Score
 import com.app.compose.cricket.domain.model.currentmatches.TeamInfo
 
@@ -37,19 +35,6 @@ private fun List<DataDto>.toDataDomain(): List<Data> = this.map {
         matchStarted = it.matchStarted,
     )
 }
-
-private fun InfoDto.toInfoDomain(): Info = Info(
-    hitsToday = hitsToday,
-    hitsUsed = hitsUsed,
-    hitsLimit = hitsLimit,
-    credits = credits,
-    server = server,
-    offsetRows = offsetRows,
-    totalRows = totalRows,
-    queryTime = queryTime,
-    s = s,
-    cache = cache,
-)
 
 private fun List<TeamInfoDto>.toTeamInfoDomain(): List<TeamInfo> = this.map {
     TeamInfo(

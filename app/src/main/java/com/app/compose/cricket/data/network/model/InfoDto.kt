@@ -1,4 +1,4 @@
-package com.app.compose.cricket.data.network.model.currentmatches
+package com.app.compose.cricket.data.network.model
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
