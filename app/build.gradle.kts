@@ -1,10 +1,12 @@
 import org.jetbrains.kotlin.kapt3.base.Kapt.kapt
+import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
 
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("kotlin-kapt")
     id("dagger.hilt.android.plugin")
+    kotlin("plugin.serialization") version "1.4.21"
 }
 
 android {
@@ -22,6 +24,13 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+
+        val properties = gradleLocalProperties(rootDir)
+        buildConfigField(
+            "String",
+            "API_KEY",
+            properties.getProperty("CRICKET_API_KEY")
+        )
     }
 
     buildTypes {
@@ -42,6 +51,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.4.3"
@@ -74,6 +84,15 @@ dependencies {
     implementation("com.google.dagger:hilt-android:2.44")
     kapt("com.google.dagger:hilt-android-compiler:2.44")
     implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
+
+    // https://ktor.io/docs/welcome.html
+    implementation("io.ktor:ktor-client-core:2.3.1")
+    implementation("io.ktor:ktor-client-android:2.3.1")
+    implementation("io.ktor:ktor-client-okhttp:2.3.1")
+    implementation("io.ktor:ktor-client-content-negotiation:2.3.1")
+    implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.1")
+    implementation("io.ktor:ktor-client-logging:2.3.1")
+    implementation("io.ktor:ktor-client-auth:2.3.1")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
