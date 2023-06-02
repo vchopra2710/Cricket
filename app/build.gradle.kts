@@ -80,6 +80,10 @@ dependencies {
     // https://google.github.io/accompanist/navigation-animation/
     implementation("com.google.accompanist:accompanist-navigation-animation:0.27.1")
 
+    // https://google.github.io/accompanist/pager/
+    implementation("com.google.accompanist:accompanist-pager:0.27.1")
+    implementation("com.google.accompanist:accompanist-pager-indicators:0.27.1")
+
     // https://developer.android.com/training/dependency-injection/hilt-android
     implementation("com.google.dagger:hilt-android:2.44")
     kapt("com.google.dagger:hilt-android-compiler:2.44")
@@ -93,6 +97,9 @@ dependencies {
     implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.1")
     implementation("io.ktor:ktor-client-logging:2.3.1")
     implementation("io.ktor:ktor-client-auth:2.3.1")
+
+    // https://coil-kt.github.io/coil/
+    implementation("io.coil-kt:coil-compose:2.4.0")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

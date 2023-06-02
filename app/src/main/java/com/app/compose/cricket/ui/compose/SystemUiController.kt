@@ -8,5 +8,5 @@ import com.google.accompanist.systemuicontroller.rememberSystemUiController
 @Composable
 fun SystemUiController() {
     val systemUiController: SystemUiController = rememberSystemUiController()
-    systemUiController.setSystemBarsColor(color = Color.Transparent, darkIcons = true)
+    systemUiController.setSystemBarsColor(color = Color.Transparent, darkIcons = false)
 }
