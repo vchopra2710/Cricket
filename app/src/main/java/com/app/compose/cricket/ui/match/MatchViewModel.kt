@@ -3,6 +3,7 @@ package com.app.compose.cricket.ui.match
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.app.compose.cricket.usecase.GetCurrentMatchUseCase
+import com.app.compose.cricket.utils.logDebug
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -17,6 +18,7 @@ class MatchViewModel @Inject constructor(
     }
 
     private fun getCurrentMatches() = viewModelScope.launch {
-        getCurrentMatchUseCase()
+        val currentMatch = getCurrentMatchUseCase()
+        logDebug("currentMatch: $currentMatch")
     }
 }

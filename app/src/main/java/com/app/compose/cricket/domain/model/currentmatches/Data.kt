@@ -9,7 +9,7 @@ data class Data(
     val date: String,
     val dateTimeGMT: String,
     val teams: List<String>,
-    val teamInfo: List<TeamInfoDto>,
+    val teamInfo: List<TeamInfo>,
     val score: List<Score>,
     val seriesId: String,
     val fantasyEnabled: Boolean,
