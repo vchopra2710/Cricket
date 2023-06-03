@@ -89,6 +89,10 @@ dependencies {
     kapt("com.google.dagger:hilt-android-compiler:2.44")
     implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
 
+    // https://developer.android.com/jetpack/androidx/releases/glance
+    implementation("androidx.glance:glance:1.0.0-beta01")
+    implementation("androidx.glance:glance-appwidget:1.0.0-beta01")
+
     // https://ktor.io/docs/welcome.html
     implementation("io.ktor:ktor-client-core:2.3.1")
     implementation("io.ktor:ktor-client-android:2.3.1")

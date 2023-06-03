@@ -1,7 +1,7 @@
 # Cricket
 
 API: https://cricketdata.org
-- register and get api key
+- register for free and get api key
 - add api key to local.properties with key CRICKET_API_KEY
 
 Dependencies:
@@ -11,6 +11,7 @@ Dependencies:
    - Horizontal Pager: https://google.github.io/accompanist/pager/
 2. Dependency Injection: https://developer.android.com/training/dependency-injection/hilt-android
 3. HTTP client: https://ktor.io/docs/welcome.html
+4. Widgets: https://developer.android.com/jetpack/androidx/releases/glance
 
 ### Screenshots
 - Current match list: uses horizontal scroll pager to navigate between current matches
