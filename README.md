@@ -22,3 +22,8 @@ Dependencies:
 <p align="center">
 <img width="350" src="screenshot/series_list.png?raw=true">
 </p>
+
+- Series info: uses bottom sheet to display series info
+<p align="center">
+<img width="350" src="screenshot/series_info_bottom_sheet.png?raw=true">
+</p>
