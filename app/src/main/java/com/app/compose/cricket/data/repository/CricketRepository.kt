@@ -8,9 +8,12 @@ import com.app.compose.cricket.data.network.mapper.toDomain
 import com.app.compose.cricket.data.network.model.cricscore.CricketScoreDto
 import com.app.compose.cricket.data.network.model.currentmatches.CurrentMatchDto
 import com.app.compose.cricket.data.network.model.series.SeriesDto
+import com.app.compose.cricket.data.network.model.seriesdetails.SeriesInfoDto
 import com.app.compose.cricket.domain.model.cricscore.CricketScore
 import com.app.compose.cricket.domain.model.currentmatches.CurrentMatch
 import com.app.compose.cricket.domain.model.series.Series
+import com.app.compose.cricket.domain.model.seriesdetails.SeriesDetail
+import com.app.compose.cricket.domain.model.seriesdetails.SeriesInfo
 import com.app.compose.cricket.domain.repository.ICricketRepository
 import com.app.compose.cricket.utils.readJsonFile
 import io.ktor.client.HttpClient
@@ -65,8 +68,8 @@ class CricketRepository @Inject constructor(
 
                 response.body()
             } else {
-                val currentMatchesString = context.readJsonFile(id = R.raw.series_list)
-                json.decodeFromString(currentMatchesString)
+                val seriesString = context.readJsonFile(id = R.raw.series_list)
+                json.decodeFromString(seriesString)
             }
 
         return seriesDto.toDomain()
@@ -85,10 +88,30 @@ class CricketRepository @Inject constructor(
 
                 response.body()
             } else {
-                val currentMatchesString = context.readJsonFile(id = R.raw.cric_score)
-                json.decodeFromString(currentMatchesString)
+                val cricketScoreString = context.readJsonFile(id = R.raw.cric_score)
+                json.decodeFromString(cricketScoreString)
             }
 
         return cricketScoreDto.toDomain()
+    }
+
+    override suspend fun getSeriesDetails(seriesId: String): SeriesInfo {
+        val seriesDetailDto: SeriesInfoDto =
+            if (CONNECT_WITH_API) {
+                val response: HttpResponse = client.request(ApiUrls.SERIES_DETAILS.url) {
+                    method = HttpMethod.Get
+                    url {
+                        parameters.append("apikey", BuildConfig.API_KEY)
+                        parameters.append("id", seriesId)
+                    }
+                }
+
+                response.body()
+            } else {
+                val seriesInfoString = context.readJsonFile(id = R.raw.series_info)
+                json.decodeFromString(seriesInfoString)
+            }
+
+        return seriesDetailDto.toDomain()
     }
 }

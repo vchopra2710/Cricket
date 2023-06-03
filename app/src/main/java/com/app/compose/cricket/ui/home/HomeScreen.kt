@@ -16,7 +16,9 @@ import com.google.accompanist.navigation.animation.rememberAnimatedNavController
 @OptIn(ExperimentalAnimationApi::class)
 @Preview
 @Composable
-fun HomeScreen(navController: NavHostController = rememberAnimatedNavController()) = Scaffold(
+fun HomeScreen(
+    navController: NavHostController = rememberAnimatedNavController(),
+) = Scaffold(
     bottomBar = { NavigationBar(navController = navController) },
     modifier = Modifier.navigationBarsPadding(),
     backgroundColor = MaterialTheme.colors.background

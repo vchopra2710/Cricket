@@ -1,0 +1,179 @@
+{
+  "apikey": "",
+  "data": {
+    "info": {
+      "id": "d2d3482d-7e79-4ed1-9e2f-865b1d16e20c",
+      "name": "Karnataka tour of Namibia, 2023",
+      "startdate": "2023-06-02",
+      "enddate": "Jun 11",
+      "odi": 5,
+      "t20": 0,
+      "test": 0,
+      "squads": 2,
+      "matches": 5
+    },
+    "matchList": [
+      {
+        "id": "0a6f2f5b-6f47-4118-825b-207e802a0ef8",
+        "name": "Namibia vs Karnataka, 1st Match",
+        "matchType": "odi",
+        "status": "Karnataka won by 9 wkts",
+        "venue": "Wanderers Cricket Ground, Windhoek",
+        "date": "2023-06-02",
+        "dateTimeGMT": "2023-06-02T07:30:00",
+        "teams": [
+          "Namibia",
+          "Karnataka"
+        ],
+        "teamInfo": [
+          {
+            "name": "Karnataka",
+            "shortname": "KAR",
+            "img": "https://g.cricapi.com/iapi/38-637897796420763611.png?w=48"
+          },
+          {
+            "name": "Namibia",
+            "shortname": "NAM",
+            "img": "https://g.cricapi.com/iapi/53-637877082656229722.webp?w=48"
+          }
+        ],
+        "fantasyEnabled": true,
+        "bbbEnabled": false,
+        "hasSquad": true,
+        "matchStarted": true,
+        "matchEnded": true
+      },
+      {
+        "id": "a94c7eba-22f0-46e8-9b01-b68ab15eb7e4",
+        "name": "Namibia vs Karnataka, 2nd Match",
+        "matchType": "odi",
+        "status": "Match not started",
+        "venue": "Wanderers Cricket Ground, Windhoek",
+        "date": "2023-06-04",
+        "dateTimeGMT": "2023-06-04T07:30:00",
+        "teams": [
+          "Namibia",
+          "Karnataka"
+        ],
+        "teamInfo": [
+          {
+            "name": "Karnataka",
+            "shortname": "KAR",
+            "img": "https://g.cricapi.com/iapi/38-637897796420763611.png?w=48"
+          },
+          {
+            "name": "Namibia",
+            "shortname": "NAM",
+            "img": "https://g.cricapi.com/iapi/53-637877082656229722.webp?w=48"
+          }
+        ],
+        "fantasyEnabled": false,
+        "bbbEnabled": false,
+        "hasSquad": true,
+        "matchStarted": false,
+        "matchEnded": false
+      },
+      {
+        "id": "e09b2507-81a0-4166-9621-c3bdf5877e13",
+        "name": "Namibia vs Karnataka, 3rd Match",
+        "matchType": "odi",
+        "status": "Match not started",
+        "venue": "Wanderers Cricket Ground, Windhoek",
+        "date": "2023-06-07",
+        "dateTimeGMT": "2023-06-07T07:30:00",
+        "teams": [
+          "Namibia",
+          "Karnataka"
+        ],
+        "teamInfo": [
+          {
+            "name": "Karnataka",
+            "shortname": "KAR",
+            "img": "https://g.cricapi.com/iapi/38-637897796420763611.png?w=48"
+          },
+          {
+            "name": "Namibia",
+            "shortname": "NAM",
+            "img": "https://g.cricapi.com/iapi/53-637877082656229722.webp?w=48"
+          }
+        ],
+        "fantasyEnabled": false,
+        "bbbEnabled": false,
+        "hasSquad": true,
+        "matchStarted": false,
+        "matchEnded": false
+      },
+      {
+        "id": "c62b22db-32eb-4e38-be51-3130651645da",
+        "name": "Namibia vs Karnataka, 4th Match",
+        "matchType": "odi",
+        "status": "Match not started",
+        "venue": "Wanderers Cricket Ground, Windhoek",
+        "date": "2023-06-09",
+        "dateTimeGMT": "2023-06-09T07:30:00",
+        "teams": [
+          "Namibia",
+          "Karnataka"
+        ],
+        "teamInfo": [
+          {
+            "name": "Karnataka",
+            "shortname": "KAR",
+            "img": "https://g.cricapi.com/iapi/38-637897796420763611.png?w=48"
+          },
+          {
+            "name": "Namibia",
+            "shortname": "NAM",
+            "img": "https://g.cricapi.com/iapi/53-637877082656229722.webp?w=48"
+          }
+        ],
+        "fantasyEnabled": false,
+        "bbbEnabled": false,
+        "hasSquad": true,
+        "matchStarted": false,
+        "matchEnded": false
+      },
+      {
+        "id": "ede43d1c-1bc7-4771-8f03-21f163e84e8e",
+        "name": "Namibia vs Karnataka, 5th Match",
+        "matchType": "odi",
+        "status": "Match not started",
+        "venue": "Wanderers Cricket Ground, Windhoek",
+        "date": "2023-06-11",
+        "dateTimeGMT": "2023-06-11T07:30:00",
+        "teams": [
+          "Namibia",
+          "Karnataka"
+        ],
+        "teamInfo": [
+          {
+            "name": "Karnataka",
+            "shortname": "KAR",
+            "img": "https://g.cricapi.com/iapi/38-637897796420763611.png?w=48"
+          },
+          {
+            "name": "Namibia",
+            "shortname": "NAM",
+            "img": "https://g.cricapi.com/iapi/53-637877082656229722.webp?w=48"
+          }
+        ],
+        "fantasyEnabled": false,
+        "bbbEnabled": false,
+        "hasSquad": true,
+        "matchStarted": false,
+        "matchEnded": false
+      }
+    ]
+  },
+  "status": "success",
+  "info": {
+    "hitsToday": 2,
+    "hitsUsed": 1,
+    "hitsLimit": 100,
+    "credits": 0,
+    "server": 11,
+    "queryTime": 17.174,
+    "s": 0,
+    "cache": 0
+  }
+}

@@ -1,4 +1,4 @@
-package com.app.compose.cricket.domain.model.currentmatches
+package com.app.compose.cricket.domain.model
 
 data class Info(
     val hitsToday: Int,

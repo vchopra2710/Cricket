@@ -17,13 +17,13 @@ fun HomeNavigation(navController: NavHostController) = AnimatedNavHost(
     navController = navController,
     startDestination = MATCH.route
 ) {
-    currencyScreen()
-    cryptoScreen()
-    menuScreen()
+    matchScreen()
+    scoreScreen()
+    seriesScreen()
 }
 
 @OptIn(ExperimentalAnimationApi::class)
-private fun NavGraphBuilder.currencyScreen() = composable(
+private fun NavGraphBuilder.matchScreen() = composable(
     route = MATCH.route,
     enterTransition = { enter() },
     exitTransition = { exit() },
@@ -31,14 +31,14 @@ private fun NavGraphBuilder.currencyScreen() = composable(
 )
 
 @OptIn(ExperimentalAnimationApi::class)
-private fun NavGraphBuilder.cryptoScreen() = composable(
+private fun NavGraphBuilder.scoreScreen() = composable(
     route = SCORE.route,
     enterTransition = { enter() },
     exitTransition = { exit() },
     content = { ScoreScreen() })
 
 @OptIn(ExperimentalAnimationApi::class)
-private fun NavGraphBuilder.menuScreen() = composable(
+private fun NavGraphBuilder.seriesScreen() = composable(
     route = SERIES.route,
     enterTransition = { enter() },
     exitTransition = { exit() },

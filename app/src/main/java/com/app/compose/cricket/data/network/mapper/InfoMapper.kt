@@ -1,7 +1,7 @@
 package com.app.compose.cricket.data.network.mapper
 
 import com.app.compose.cricket.data.network.model.InfoDto
-import com.app.compose.cricket.domain.model.currentmatches.Info
+import com.app.compose.cricket.domain.model.Info
 
 fun InfoDto.toInfoDomain(): Info = Info(
     hitsToday = hitsToday,
