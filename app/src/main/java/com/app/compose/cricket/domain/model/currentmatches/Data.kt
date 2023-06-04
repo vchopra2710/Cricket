@@ -1,5 +1,8 @@
 package com.app.compose.cricket.domain.model.currentmatches
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class Data(
     val id: String,
     val name: String,

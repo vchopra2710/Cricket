@@ -1,5 +1,8 @@
 package com.app.compose.cricket.domain.model
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class Info(
     val hitsToday: Int,
     val hitsUsed: Int,
