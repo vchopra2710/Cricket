@@ -1,4 +1,4 @@
-package com.app.compose.cricket.ui.fantasy
+package com.app.compose.cricket.ui.newsfeed
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -12,7 +12,7 @@ import androidx.compose.ui.graphics.Color
 import com.app.compose.cricket.ui.compose.Text
 
 @Composable
-fun FantasyScreen() = Column(
+fun NewsFeedScreen() = Column(
     modifier = Modifier
         .fillMaxSize()
         .background(Color.Black)
@@ -20,5 +20,5 @@ fun FantasyScreen() = Column(
     horizontalAlignment = Alignment.CenterHorizontally,
     verticalArrangement = Arrangement.Center,
 ) {
-    Text(text = "fantasy screen")
+    Text(text = "news feed screen")
 }

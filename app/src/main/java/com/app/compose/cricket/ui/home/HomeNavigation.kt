@@ -6,7 +6,7 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import com.app.compose.cricket.ui.bottomnavigation.NavigationItem.*
 import com.app.compose.cricket.ui.match.MatchScreen
-import com.app.compose.cricket.ui.fantasy.FantasyScreen
+import com.app.compose.cricket.ui.newsfeed.NewsFeedScreen
 import com.app.compose.cricket.ui.series.SeriesScreen
 import com.google.accompanist.navigation.animation.AnimatedNavHost
 import com.google.accompanist.navigation.animation.composable
@@ -18,7 +18,7 @@ fun HomeNavigation(navController: NavHostController) = AnimatedNavHost(
     startDestination = MATCH.route
 ) {
     matchScreen()
-    fantasyScreen()
+    newsFeedScreen()
     seriesScreen()
 }
 
@@ -31,11 +31,11 @@ private fun NavGraphBuilder.matchScreen() = composable(
 )
 
 @OptIn(ExperimentalAnimationApi::class)
-private fun NavGraphBuilder.fantasyScreen() = composable(
-    route = FANTASY.route,
+private fun NavGraphBuilder.newsFeedScreen() = composable(
+    route = NEWS.route,
     enterTransition = { enter() },
     exitTransition = { exit() },
-    content = { FantasyScreen() })
+    content = { NewsFeedScreen() })
 
 @OptIn(ExperimentalAnimationApi::class)
 private fun NavGraphBuilder.seriesScreen() = composable(

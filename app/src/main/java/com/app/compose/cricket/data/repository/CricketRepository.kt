@@ -3,7 +3,7 @@ package com.app.compose.cricket.data.repository
 import android.content.Context
 import com.app.compose.cricket.BuildConfig
 import com.app.compose.cricket.R
-import com.app.compose.cricket.data.network.ApiUrls
+import com.app.compose.cricket.data.network.ApiRoutes
 import com.app.compose.cricket.data.network.mapper.toDomain
 import com.app.compose.cricket.data.network.model.cricscore.CricketScoreDto
 import com.app.compose.cricket.data.network.model.currentmatches.CurrentMatchDto
@@ -34,8 +34,9 @@ class CricketRepository @Inject constructor(
     }
 
     override suspend fun getCurrentMatches(): CurrentMatch = if (CONNECT_WITH_API) {
-        client.request(ApiUrls.CURRENT_CRICKET_MATCHES.url) {
+        client.request(ApiRoutes.CURRENT_CRICKET_MATCHES) {
             method = HttpMethod.Get
+
             url {
                 parameters.append("apikey", BuildConfig.API_KEY)
                 parameters.append("offset", "0")
@@ -47,7 +48,7 @@ class CricketRepository @Inject constructor(
     }.toDomain()
 
     override suspend fun getSeries(): Series = if (CONNECT_WITH_API) {
-        client.request(ApiUrls.SERIES.url) {
+        client.request(ApiRoutes.SERIES) {
             method = HttpMethod.Get
             url {
                 parameters.append("apikey", BuildConfig.API_KEY)
@@ -60,7 +61,7 @@ class CricketRepository @Inject constructor(
     }.toDomain()
 
     override suspend fun getCricketScore(): CricketScore = if (CONNECT_WITH_API) {
-        client.request(ApiUrls.CRICKET_SCORE.url) {
+        client.request(ApiRoutes.CRICKET_SCORE) {
             method = HttpMethod.Get
             url {
                 parameters.append("apikey", BuildConfig.API_KEY)
@@ -75,7 +76,7 @@ class CricketRepository @Inject constructor(
     override suspend fun getSeriesDetails(
         seriesId: String,
     ): SeriesInfo = if (CONNECT_WITH_API) {
-        client.request(ApiUrls.SERIES_DETAILS.url) {
+        client.request(ApiRoutes.SERIES_DETAILS) {
             method = HttpMethod.Get
             url {
                 parameters.append("apikey", BuildConfig.API_KEY)

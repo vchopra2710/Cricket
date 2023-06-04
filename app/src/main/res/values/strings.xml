@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Cricket</string>
     <string name="match_tab">Match</string>
-    <string name="fantasy_tab">Fantasy</string>
+    <string name="news_feed_tab">Feed</string>
     <string name="series_tab">Series</string>
     <string name="series_matches">Matches %s</string>
     <string name="series_odi">ODI</string>

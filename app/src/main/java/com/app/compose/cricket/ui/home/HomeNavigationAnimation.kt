@@ -17,7 +17,7 @@ fun AnimatedContentScope<NavBackStackEntry>.enter(): EnterTransition? {
     val (from, to) = destination()
     return when (from) {
         MATCH.route -> slideIntoContainer(Left, animationSpec = tween(ANIMATION_DURATION))
-        FANTASY.route -> when (to) {
+        NEWS.route -> when (to) {
             MATCH.route -> slideIntoContainer(Right, animationSpec = tween(ANIMATION_DURATION))
             SERIES.route -> slideIntoContainer(Left, animationSpec = tween(ANIMATION_DURATION))
             else -> null
@@ -32,7 +32,7 @@ fun AnimatedContentScope<NavBackStackEntry>.exit(): ExitTransition? {
     val (from, to) = destination()
     return when (to) {
         MATCH.route -> slideOutOfContainer(Right, animationSpec = tween(ANIMATION_DURATION))
-        FANTASY.route -> when (from) {
+        NEWS.route -> when (from) {
             MATCH.route -> slideOutOfContainer(Left, animationSpec = tween(ANIMATION_DURATION))
             SERIES.route -> slideOutOfContainer(Right, animationSpec = tween(ANIMATION_DURATION))
             else -> null

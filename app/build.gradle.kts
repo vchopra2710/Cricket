@@ -1,4 +1,3 @@
-import org.jetbrains.kotlin.kapt3.base.Kapt.kapt
 import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
 
 plugins {
@@ -74,33 +73,36 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material:material")
 
+    val accompanistVersion = "0.27.1"
     // https://google.github.io/accompanist/systemuicontroller/
-    implementation("com.google.accompanist:accompanist-systemuicontroller:0.27.1")
+    implementation("com.google.accompanist:accompanist-systemuicontroller:$accompanistVersion")
 
     // https://google.github.io/accompanist/navigation-animation/
-    implementation("com.google.accompanist:accompanist-navigation-animation:0.27.1")
+    implementation("com.google.accompanist:accompanist-navigation-animation:$accompanistVersion")
 
     // https://google.github.io/accompanist/pager/
-    implementation("com.google.accompanist:accompanist-pager:0.27.1")
-    implementation("com.google.accompanist:accompanist-pager-indicators:0.27.1")
+    implementation("com.google.accompanist:accompanist-pager:$accompanistVersion")
+    implementation("com.google.accompanist:accompanist-pager-indicators:$accompanistVersion")
 
     // https://developer.android.com/training/dependency-injection/hilt-android
-    implementation("com.google.dagger:hilt-android:2.44")
-    kapt("com.google.dagger:hilt-android-compiler:2.44")
+    val hiltVersion = "2.44"
+    implementation("com.google.dagger:hilt-android:$hiltVersion")
+    kapt("com.google.dagger:hilt-android-compiler:$hiltVersion")
     implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
 
     // https://developer.android.com/jetpack/androidx/releases/glance
-    implementation("androidx.glance:glance:1.0.0-beta01")
-    implementation("androidx.glance:glance-appwidget:1.0.0-beta01")
+    val glanceVersion = "1.0.0-beta01"
+    implementation("androidx.glance:glance:$glanceVersion")
+    implementation("androidx.glance:glance-appwidget:$glanceVersion")
 
     // https://ktor.io/docs/welcome.html
-    implementation("io.ktor:ktor-client-core:2.3.1")
-    implementation("io.ktor:ktor-client-android:2.3.1")
-    implementation("io.ktor:ktor-client-okhttp:2.3.1")
-    implementation("io.ktor:ktor-client-content-negotiation:2.3.1")
-    implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.1")
-    implementation("io.ktor:ktor-client-logging:2.3.1")
-    implementation("io.ktor:ktor-client-auth:2.3.1")
+    val ktorVersion = "2.3.1"
+    implementation("io.ktor:ktor-client-core:$ktorVersion")
+    implementation("io.ktor:ktor-client-okhttp:$ktorVersion")
+    implementation("io.ktor:ktor-client-android:$ktorVersion")
+    implementation("io.ktor:ktor-client-logging:$ktorVersion")
+    implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
+    implementation("io.ktor:ktor-client-content-negotiation:$ktorVersion")
 
     // https://coil-kt.github.io/coil/
     implementation("io.coil-kt:coil-compose:2.4.0")

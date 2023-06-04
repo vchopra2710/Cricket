@@ -14,10 +14,10 @@ enum class NavigationItem(
         icon = R.drawable.ic_list,
         route = "route_match",
     ),
-    FANTASY(
-        title = R.string.fantasy_tab,
-        icon = R.drawable.ic_shopping_basket,
-        route = "route_fantasy",
+    NEWS(
+        title = R.string.news_feed_tab,
+        icon = R.drawable.ic_feed,
+        route = "route_news_feed",
     ),
     SERIES(
         title = R.string.series_tab,
