@@ -1,8 +1,14 @@
 # Cricket
 
-API: https://cricketdata.org
-- register for free and get api key
-- add api key to local.properties with key CRICKET_API_KEY
+### Overview:
+
+Get api key from following websites to get recent data  
+
+Sr.No.  | Website         | KEY
+------------- |-----------------| -------------
+1. | https://cricketdata.org | CRICKET_API_KEY 
+2.  | https://newsapi.org/  | NEWS_API_KEY    
+
 
 Dependencies:
 1. Accompanist

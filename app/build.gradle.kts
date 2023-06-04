@@ -27,8 +27,13 @@ android {
         val properties = gradleLocalProperties(rootDir)
         buildConfigField(
             "String",
-            "API_KEY",
+            "CRICKET_API_KEY",
             properties.getProperty("CRICKET_API_KEY")
+        )
+        buildConfigField(
+            "String",
+            "NEWS_API_KEY",
+            properties.getProperty("NEWS_API_KEY")
         )
     }
 

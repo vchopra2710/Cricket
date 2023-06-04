@@ -4,6 +4,7 @@ import android.content.Context
 import com.app.compose.cricket.BuildConfig
 import com.app.compose.cricket.R
 import com.app.compose.cricket.data.network.ApiRoutes
+import com.app.compose.cricket.data.network.ApiRoutes.CONNECT_TO_CRICKET_BE
 import com.app.compose.cricket.data.network.mapper.toDomain
 import com.app.compose.cricket.data.network.model.cricscore.CricketScoreDto
 import com.app.compose.cricket.data.network.model.currentmatches.CurrentMatchDto
@@ -22,23 +23,23 @@ import io.ktor.http.HttpMethod
 import kotlinx.serialization.json.Json
 import javax.inject.Inject
 
-private const val CONNECT_WITH_API = false
+private const val CRICKET_API_KEY = BuildConfig.CRICKET_API_KEY
 
 class CricketRepository @Inject constructor(
     private val context: Context,
-    private val client: HttpClient
+    private val client: HttpClient,
 ) : ICricketRepository {
 
     private val json = Json {
         explicitNulls = false
     }
 
-    override suspend fun getCurrentMatches(): CurrentMatch = if (CONNECT_WITH_API) {
+    override suspend fun getCurrentMatches(): CurrentMatch = if (CONNECT_TO_CRICKET_BE) {
         client.request(ApiRoutes.CURRENT_CRICKET_MATCHES) {
             method = HttpMethod.Get
 
             url {
-                parameters.append("apikey", BuildConfig.API_KEY)
+                parameters.append("apikey", CRICKET_API_KEY)
                 parameters.append("offset", "0")
             }
         }.body<CurrentMatchDto>()
@@ -47,11 +48,11 @@ class CricketRepository @Inject constructor(
         json.decodeFromString<CurrentMatchDto>(currentMatchesString)
     }.toDomain()
 
-    override suspend fun getSeries(): Series = if (CONNECT_WITH_API) {
+    override suspend fun getSeries(): Series = if (CONNECT_TO_CRICKET_BE) {
         client.request(ApiRoutes.SERIES) {
             method = HttpMethod.Get
             url {
-                parameters.append("apikey", BuildConfig.API_KEY)
+                parameters.append("apikey", CRICKET_API_KEY)
                 parameters.append("offset", "0")
             }
         }.body<SeriesDto>()
@@ -60,11 +61,11 @@ class CricketRepository @Inject constructor(
         json.decodeFromString<SeriesDto>(seriesString)
     }.toDomain()
 
-    override suspend fun getCricketScore(): CricketScore = if (CONNECT_WITH_API) {
+    override suspend fun getCricketScore(): CricketScore = if (CONNECT_TO_CRICKET_BE) {
         client.request(ApiRoutes.CRICKET_SCORE) {
             method = HttpMethod.Get
             url {
-                parameters.append("apikey", BuildConfig.API_KEY)
+                parameters.append("apikey", CRICKET_API_KEY)
                 parameters.append("offset", "0")
             }
         }.body<CricketScoreDto>()
@@ -75,11 +76,11 @@ class CricketRepository @Inject constructor(
 
     override suspend fun getSeriesDetails(
         seriesId: String,
-    ): SeriesInfo = if (CONNECT_WITH_API) {
+    ): SeriesInfo = if (CONNECT_TO_CRICKET_BE) {
         client.request(ApiRoutes.SERIES_DETAILS) {
             method = HttpMethod.Get
             url {
-                parameters.append("apikey", BuildConfig.API_KEY)
+                parameters.append("apikey", CRICKET_API_KEY)
                 parameters.append("id", seriesId)
             }
         }.body<SeriesInfoDto>()
