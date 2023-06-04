@@ -28,3 +28,8 @@ Dependencies:
 <p align="center">
 <img width="350" src="screenshot/series_info_bottom_sheet.png?raw=true">
 </p>
+
+- Widget: use androidx glance api to display compose widget
+<p align="center">
+<img width="350" src="screenshot/current_match_widget.png?raw=true">
+</p>
