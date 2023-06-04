@@ -19,8 +19,8 @@ Dependencies:
 - Series info: uses bottom sheet to display series info
 - Widget: use androidx glance api to display compose widget
 <p align="center">
-<img width="350" src="screenshot/current_matches.png?raw=true">
-<img width="350" src="screenshot/current_matches.png?raw=true">
-<img width="350" src="screenshot/series_list.png?raw=true">
-<img width="350" src="screenshot/series_info_bottom_sheet.png?raw=true">
+<img width="300" src="screenshot/current_matches.png?raw=true">
+<img width="300" src="screenshot/series_list.png?raw=true">
+<img width="300" src="screenshot/series_info_bottom_sheet.png?raw=true">
+<img width="300" src="screenshot/current_match_widget.png?raw=true">
 </p>
