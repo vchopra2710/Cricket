@@ -11,17 +11,17 @@ enum class NavigationItem(
 ) {
     MATCH(
         title = R.string.match_tab,
-        icon = R.drawable.list,
+        icon = R.drawable.ic_list,
         route = "route_match",
     ),
-    SCORE(
-        title = R.string.score_tab,
-        icon = R.drawable.view_list,
-        route = "route_score",
+    FANTASY(
+        title = R.string.fantasy_tab,
+        icon = R.drawable.ic_shopping_basket,
+        route = "route_fantasy",
     ),
     SERIES(
         title = R.string.series_tab,
-        icon = R.drawable.cricket,
+        icon = R.drawable.ic_cricket,
         route = "route_series",
     )
 }

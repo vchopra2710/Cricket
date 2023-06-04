@@ -1,4 +1,4 @@
-package com.app.compose.cricket.ui.score
+package com.app.compose.cricket.ui.fantasy
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -12,7 +12,7 @@ import androidx.compose.ui.graphics.Color
 import com.app.compose.cricket.ui.compose.Text
 
 @Composable
-fun ScoreScreen() = Column(
+fun FantasyScreen() = Column(
     modifier = Modifier
         .fillMaxSize()
         .background(Color.Black)
@@ -20,5 +20,5 @@ fun ScoreScreen() = Column(
     horizontalAlignment = Alignment.CenterHorizontally,
     verticalArrangement = Arrangement.Center,
 ) {
-    Text(text = "score screen")
+    Text(text = "fantasy screen")
 }
