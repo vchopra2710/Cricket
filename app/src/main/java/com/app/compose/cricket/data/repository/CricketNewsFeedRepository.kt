@@ -28,17 +28,18 @@ class CricketNewsFeedRepository @Inject constructor(
         explicitNulls = false
     }
 
-    override suspend fun getCricketNewsFeed(): CricketNewsFeed = if (CONNECT_TO_NEWS_BE) {
-        client.request(ApiRoutes.GET_EVERY_NEWS) {
-            method = HttpMethod.Get
+    override suspend fun getCricketNewsFeed(query: String): CricketNewsFeed =
+        if (CONNECT_TO_NEWS_BE) {
+            client.request(ApiRoutes.GET_EVERY_NEWS) {
+                method = HttpMethod.Get
 
-            url {
-                parameters.append("apiKey", NEWS_API_KEY)
-                parameters.append("q", "cricket+t20+odi+test+india")
-            }
-        }.body<CricketNewsFeedDto>()
-    } else {
-        val currentMatchesString = context.readJsonFile(id = R.raw.cricket_news_feed)
-        json.decodeFromString<CricketNewsFeedDto>(currentMatchesString)
-    }.toDomain()
+                url {
+                    parameters.append("apiKey", NEWS_API_KEY)
+                    parameters.append("q", "cricket+t20+odi+test+$query")
+                }
+            }.body<CricketNewsFeedDto>()
+        } else {
+            val cricketNewsFeedString = context.readJsonFile(id = R.raw.cricket_news_feed)
+            json.decodeFromString<CricketNewsFeedDto>(cricketNewsFeedString)
+        }.toDomain()
 }

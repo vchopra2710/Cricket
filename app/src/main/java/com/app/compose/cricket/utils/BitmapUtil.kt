@@ -2,21 +2,22 @@ package com.app.compose.cricket.utils
 
 import android.content.Context
 import android.graphics.Bitmap
-import androidx.core.graphics.drawable.toBitmap
-import coil.imageLoader
-import coil.request.ImageRequest
-import coil.request.SuccessResult
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.runBlocking
-import kotlinx.coroutines.withContext
+import androidx.annotation.DrawableRes
+import androidx.core.content.ContextCompat
+import com.google.android.gms.maps.model.BitmapDescriptor
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
 
-suspend fun Context.getBitmapFromUrl(
-    url: String
-): Bitmap = withContext(Dispatchers.IO) {
-    val request = ImageRequest.Builder(this@getBitmapFromUrl)
-        .data(url)
-        .build()
-    val result = (imageLoader.execute(request))
-    val drawable = (result as SuccessResult).drawable
-    drawable.toBitmap()
+fun Context.bitmapDescriptor(
+    @DrawableRes id: Int
+): BitmapDescriptor? {
+    val drawable = ContextCompat.getDrawable(this, id) ?: return null
+    drawable.setBounds(0, 0, drawable.intrinsicWidth, drawable.intrinsicHeight)
+    val bm = Bitmap.createBitmap(
+        drawable.intrinsicWidth,
+        drawable.intrinsicHeight,
+        Bitmap.Config.ARGB_8888
+    )
+    val canvas = android.graphics.Canvas(bm)
+    drawable.draw(canvas)
+    return BitmapDescriptorFactory.fromBitmap(bm)
 }

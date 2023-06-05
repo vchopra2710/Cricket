@@ -2,8 +2,8 @@ package com.app.compose.cricket.ui.newsfeed
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.app.compose.cricket.domain.model.newsfeed.Article
 import com.app.compose.cricket.usecase.GetCricketNewsFeedUseCase
+import com.app.compose.cricket.utils.SingleEvent
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -20,21 +20,18 @@ class NewsFeedViewModel @Inject constructor(
     val state: StateFlow<NewsFeedState>
         get() = _state
 
-    init {
-        getNewsFeed()
-    }
+    val showBottomSheet = SingleEvent()
 
-    private fun getNewsFeed() = viewModelScope.launch {
-        val newsFeed = getCricketNewsFeedUseCase()
+    fun getNewsFeed(searchQuery: String) = viewModelScope.launch {
+        val newsFeed = getCricketNewsFeedUseCase(
+            query = searchQuery
+        )
         _state.update {
             it.copy(
                 articles = newsFeed.articles ?: listOf()
             )
+        }.also {
+            showBottomSheet.send()
         }
     }
 }
-
-data class NewsFeedState(
-    val articles: List<Article> = listOf(),
-    val article: Article? = null,
-)

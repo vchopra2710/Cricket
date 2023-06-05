@@ -9,7 +9,7 @@ import javax.inject.Inject
 class GetCricketNewsFeedUseCase @Inject constructor(
     private val repository: ICricketNewsFeedRepository,
 ) {
-    suspend operator fun invoke(): CricketNewsFeed = withContext(Dispatchers.IO) {
-        repository.getCricketNewsFeed()
+    suspend operator fun invoke(query: String): CricketNewsFeed = withContext(Dispatchers.IO) {
+        repository.getCricketNewsFeed(query = query)
     }
 }
