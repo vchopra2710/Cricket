@@ -4,14 +4,15 @@
 
 Get api key from following websites to get recent data  
 
-Sr.No.  | Website         | Key             | Location         |
-------------- |-----------------|-----------------|------------------|
-1. | https://cricketdata.org | CRICKET_API_KEY | local.properties |
-2. | https://newsapi.org/  | NEWS_API_KEY    | local.properties |
-3. | https://console.cloud.google.com/apis/dashboard | google_maps_key | strings.xml      |
+| Sr.No.  | Website | Key | Location |
+| ------------- | ------------- | ------------- | ------------- |
+| 1.  | [Cricket Data](https://cricketdata.org)  | CRICKET_API_KEY  | local.properties   |
+| 2.  | [News Feed](https://newsapi.org/)  | NEWS_API_KEY  | local.properties   |
+| 3.  | [Google Maps](https://console.cloud.google.com/apis/dashboard)  | google_maps_key  | strings.xml   |
 
+---
 
-Dependencies:
+### Dependencies:
 1. Accompanist
    - System UI Controller: https://google.github.io/accompanist/systemuicontroller
    - Navigation Animation: https://google.github.io/accompanist/navigation-animation
@@ -20,6 +21,8 @@ Dependencies:
 3. HTTP client: https://ktor.io/docs/welcome.html
 4. Widgets: https://developer.android.com/jetpack/androidx/releases/glance
 5. Maps: https://medium.com/mobile-development-group/google-maps-android-api-v2-aa62e6fa0fbc
+
+---
 
 ### Screenshots
 - Current match list: uses horizontal scroll pager to navigate between current matches
