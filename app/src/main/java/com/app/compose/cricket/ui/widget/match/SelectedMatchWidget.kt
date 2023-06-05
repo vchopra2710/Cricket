@@ -48,9 +48,7 @@ object SelectedMatchWidget : GlanceAppWidget() {
     ) {
         provideContent {
             val cricketMatch = currentState<CurrentMatch?>()
-            Content(
-                cricketMatch = (cricketMatch?.data ?: listOf()).filter { !it.matchEnded }
-            )
+            Content(cricketMatch = cricketMatch?.data ?: listOf())
         }
     }
 
