@@ -11,5 +11,5 @@ object ApiRoutes {
     const val GET_EVERY_NEWS = "$NEWS_BASE_URL/everything"
 
     const val CONNECT_TO_CRICKET_BE = false
-    const val CONNECT_TO_NEWS_BE = true
+    const val CONNECT_TO_NEWS_BE = false
 }

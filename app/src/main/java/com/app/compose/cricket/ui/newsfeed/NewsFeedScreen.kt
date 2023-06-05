@@ -102,7 +102,10 @@ fun NewsFeedScreen(
                     state = MarkerState(position = it.latLng),
                     title = it.name,
                     icon = context.bitmapDescriptor(id = it.icon),
-                    onInfoWindowClick = { _ -> viewModel.getNewsFeed(it.searchQuery) },
+                    onClick = { _ ->
+                        viewModel.getNewsFeed(it.searchQuery)
+                        false
+                    },
                 )
             }
 
