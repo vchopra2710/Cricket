@@ -1,4 +1,4 @@
-package com.app.compose.cricket.ui.widget
+package com.app.compose.cricket.ui.widget.match
 
 import android.content.Context
 import androidx.datastore.core.CorruptionException

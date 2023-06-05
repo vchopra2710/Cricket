@@ -28,7 +28,7 @@
         </activity>
 
         <receiver
-            android:name=".ui.widget.SelectedMatchReceiver"
+            android:name=".ui.widget.match.SelectedMatchReceiver"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />

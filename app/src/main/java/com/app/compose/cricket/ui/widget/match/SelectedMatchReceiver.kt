@@ -1,4 +1,4 @@
-package com.app.compose.cricket.ui.widget
+package com.app.compose.cricket.ui.widget.match
 
 import android.appwidget.AppWidgetManager
 import android.content.Context
@@ -8,7 +8,6 @@ import androidx.glance.appwidget.GlanceAppWidgetManager
 import androidx.glance.appwidget.GlanceAppWidgetReceiver
 import androidx.glance.appwidget.state.updateAppWidgetState
 import androidx.glance.appwidget.updateAll
-import com.app.compose.cricket.usecase.GetCricketScoreUseCase
 import com.app.compose.cricket.usecase.GetCurrentMatchUseCase
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
