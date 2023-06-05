@@ -6,6 +6,7 @@ plugins {
     id("kotlin-kapt")
     id("dagger.hilt.android.plugin")
     kotlin("plugin.serialization") version "1.4.21"
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -111,6 +112,10 @@ dependencies {
 
     // https://coil-kt.github.io/coil/
     implementation("io.coil-kt:coil-compose:2.4.0")
+
+    // https://developers.google.com/maps/documentation/android-sdk/maps-compose
+    implementation("com.google.maps.android:maps-compose:2.11.4")
+    implementation("com.google.android.gms:play-services-maps:18.1.0")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
