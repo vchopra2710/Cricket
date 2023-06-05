@@ -4,11 +4,11 @@
 
 Get api key from following websites to get recent data  
 
-| Sr.No.  | Website | Key | Location |
-| ------------- | ------------- | ------------- | ------------- |
-| 1.  | [Cricket Data](https://cricketdata.org)  | CRICKET_API_KEY  | local.properties   |
-| 2.  | [News Feed](https://newsapi.org/)  | NEWS_API_KEY  | local.properties   |
-| 3.  | [Google Maps](https://console.cloud.google.com/apis/dashboard)  | google_maps_key  | strings.xml   |
+| Sr.No. | Website                                                        | Key             | Location         |
+|--------|----------------------------------------------------------------|-----------------|------------------|
+| 1.     | [Cricket Data](https://cricketdata.org)                        | CRICKET_API_KEY | local.properties |
+| 2.     | [News Feed](https://newsapi.org/)                              | NEWS_API_KEY    | local.properties |
+| 3.     | [Google Maps](https://console.cloud.google.com/apis/dashboard) | google_maps_key | strings.xml      |
 
 ---
 
